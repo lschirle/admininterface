@@ -42,9 +42,14 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script>
 $(document).ready(function(){
-    // for(var i=0; i<10; i++){
-    //     $("table").append("<tr><td>hello</td></tr>");
-    // }
+
+    // data = loading{"file.json"};
+    // data = loading{from table "names", database "schools"};
+    data = ["123 John St.", "234 Mary St.", "345 Wood st."]
+    
+    for(var i=0; i<data.length; i++){
+        $("#address_table").append("<tr><td>" + data[i] + "</td></tr>");        
+    }
 });
 
 </script>
@@ -70,8 +75,8 @@ $(document).ready(function(){
             </div>
         </div>
 
-        <table style="width:95%">
-        <tr>
+        <table id="address_table" class="big_table" style="width:95%">
+        <!-- <tr>
             <th>Parcel id</th>
             <th>Address</th>
             <th>Event</th>
@@ -208,7 +213,7 @@ $(document).ready(function(){
             <td>123 Johnson St.</td>
             <td>Appraised by John Doe</td>
             <td><button>Edit</button></td>
-        </tr>
+        </tr> -->
     </table>
     </main>
 </body>
